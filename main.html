@@ -8,14 +8,48 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <style>
     /* button.navbar-toggler {
             float: left;
         } */
+    /* 
+    :root {
+      --bs-xs: 0;
+      --bs-sm: 576px;
+      --bs-md: 768px;
+      --bs-lg: 992px;
+      --bs-xl: 1200px;
+      --bs-xxl: 1400px;
+      --bs-scrollbar-size: 5px;
+      --bs-scrollbar-overlay-size: 19px;
+      --bs-scrollbar-overlay-space: 7px;
+      --bs-white-bg-rgb: 255, 255, 255;
+      --bs-black-bg-rgb: 0, 0, 0;
+    } */
+
+    html,
+    body {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      /* font-size: 13px !important; */
+      font-weight: 400;
+      font-family: Inter, Helvetica, "sans-serif";
+    }
+
+    div.offcanvas-body {
+      width: 237px !important;
+    }
+
+
     .offcanvas {
       display: flex;
       flex-wrap: nowrap;
+      width: 237px !important;
     }
 
     .Pic {
@@ -24,6 +58,7 @@
       border-radius: 6.175px;
       margin-left: 20px;
     }
+
     .logo {
       position: absolute;
       left: 60px;
@@ -31,31 +66,180 @@
       width: 40px;
       height: 40px;
     }
+
+    ul.dropdown-menu {
+      border: none;
+    }
+
     .nav-s {
       padding: 0 20px;
     }
-    .bi{
+
+    .bi {
       margin-left: 20px;
+      width: 19.54px;
+      height: 19.54px;
     }
-    
+
+
+    .dropdown-menu[data-bs-popper] {
+      left: 25%;
+    }
+
     ::marker {
       /* 清除偽類，利用刪除content */
-      content:none;
+      content: none;
     }
-    .dropdown-toggle::after {
-    display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: url(./);
 
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0;
-    border-left: 0.3em solid transparent;
-    transform: rotateZ(90deg);
-    transition: transform 0.3s ease;}
+    .dropdown-toggle1:after {
+      vertical-align: 0.255em;
+      border-bottom: 0;
+
+    }
+
+
+
+    a.nav-link.test {
+      display: flex;
+      position: relative;
+      font-size: 0.9rem !important;
+      color: #788297;
+    }
+
+    a.nav-link {
+      font-size: 0.9rem !important;
+      color: #788297;
+    }
+
+    a.dropdown-item {
+      display: flex;
+
+    }
+
+    .bullet-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: black;
+      display: inline-block;
+      position: relative;
+      top: 10px;
+      left: -15px;
+      flex-shrink: 0;
+      /* left: -20px; */
+      /* margin-left: 20px; */
+    }
+
+    .test {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .test:after {
+      position: absolute;
+      display: block;
+      content: '';
+      background-image: url('./chevron-right.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 9px !important;
+      width: 9px !important;
+      bottom: 18px;
+      left: 180px;
+      transform: rotateZ(90deg);
+      transition: transform 0.5s ease;
+    }
+
+    /* .test-1:after {
+      position: absolute;
+      content: '';
+      background-image: url('./chevron-right.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      height: 9px !important;
+      width: 9px !important;
+      cursor: pointer;
+      transform: rotateZ(90deg);
+      transform: rotate(180deg); 
+      transition: transform 0.3s ease;
+    } */
+
+
+    .test-1 {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .test-1::after {
+      position: absolute;
+      content: '';
+      background-image: url('./chevron-right.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      height: 9px !important;
+      width: 9px !important;
+      transform: rotate(90deg);
+      transition: transform 0.5s ease;
+    }
+
+
+    .test-1.rotate::after,
+    .test.rotate::after {
+      transform: rotate(-90deg);
+    }
+
+    /* color */
+    .test-text-1,
+    .test-text {     
+      color: black;
+    }
+
+    .test-text.color-change,
+    .test-1.test-text.color-change {
+      color: #00A3FF;
+    }
     
+    /* .test-text {
+      cursor: pointer;
+      color: black;     
+    }
 
+    .test-text.color-change {
+      color: #00A3FF;
+    } */
+
+
+    .test-1:first-child:after {
+      position: absolute;
+      top: 5px;
+      left: 180px;
+    }
+
+    a.nav-link.test-1 {
+      display: flex;
+      position: relative;
+      font-size: 0.9rem !important;
+      color: #788297;
+    }
+
+    button {
+      border: none;
+      background-color: white;
+    }
+
+    button-navbar-toggler {
+      border: none;
+    }
+
+    .card-body {
+      position: absolute;
+      bottom: -50px;
+      right: 50;
+    }
+
+    @media (max-width: 991.98px) {}
   </style>
 </head>
 
@@ -66,78 +250,655 @@
       <span class="navbar-toggler-icon">
       </span>
     </button>
+
+
     
     <img class="logo" src="https://preview.keenthemes.com/craft/assets/media/logos/logo-compact.svg">
     <div class="nav-s d-flex flex-nowrap">
-    <i class="bi bi-search text-body-tertiary"></i>
-    <i class="bi bi-bar-chart-line-fill text-body-tertiary"></i>
-    <i class="bi bi-grid-fill text-body-tertiary"></i>
-    <i class="bi bi-chat-square-text text-body-tertiary"></i>
-    <i class="bi bi-grid-fill text-body-tertiary "></i>
-    <i class="bi bi-brightness-high-fill text-body-tertiary"></i>
-    <img class="Pic" src="	https://preview.keenthemes.com/craft/assets/media/avatars/300-1.jpg">
-  </div>
+      <i class="bi bi-search text-body-tertiary"></i>
+      <i class="bi bi-bar-chart-line-fill text-body-tertiary"></i>
+      <i class="bi bi-grid-fill text-body-tertiary"></i>
+      <i class="bi bi-chat-square-text text-body-tertiary"></i>
+      <i class="bi bi-grid-fill text-body-tertiary "></i>
+      <i class="bi bi-brightness-high-fill text-body-tertiary"></i>
+      <p class="d-inline-flex gap-1">
+        <img class="Pic" src="	https://preview.keenthemes.com/craft/assets/media/avatars/300-1.jpg" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            12456768765432142355436434243
+          </div>
+        </div>
+    </div>
     <div class="container-fluid">
 
       <!-- <a class="navbar-brand" href="#"></a> -->
 
 
       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        
         <div class="offcanvas-body">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Dashboards
+
+          <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent1" aria-controls="navbarToggleExternalContent1"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <a class="nav-link test-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-grid-fill text-body-tertiary"></i>&nbsp;&nbsp;Dashboards
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Multipurpose</a></li>
-              <br>
-              <li><a class="dropdown-item" href="#">Store Analytics</a></li>
-              <br>
-              <li><a class="dropdown-item" href="#">Logistics</a></li>
-              <br>
-              <li><a class="dropdown-item" href="#">Projects</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
+            <div class="collapse" id="navbarToggleExternalContent1" data-bs-theme="white">
+              <div class="bg-white p-4">
+
+                <ul class="">
+                  <li><a class="dropdown-item " href="#">
+                      <div class="bullet-dot"></div>Multipurpose
+                    </a></li>
+                  <br>
+                  <li><a class="dropdown-item" href="#">
+                      <div class="bullet-dot"></div>Store Analytics
+                    </a></li>
+                  <br>
+                  <li><a class="dropdown-item" href="#">
+                      <div class="bullet-dot"></div>Logistics
+                    </a></li>
+                  <br>
+                  <li><a class="dropdown-item" href="#">
+                      <div class="bullet-dot"></div>Projects
+                    </a></li>
+
+                </ul>
+              </div>
+            </div>
+          </button>
+
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <br>
+              <a class="nav-link active" aria-current="page">&nbsp;&nbsp;&nbsp;&nbsp;CRAFTED</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown
+
+
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent2" aria-controls="navbarToggleExternalContent2"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-archive-fill text-body-tertiary"></i>&nbsp;&nbsp;Pages
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+              <div class="collapse" id="navbarToggleExternalContent2" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>User Profile
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Socail
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>About
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>FAQ
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Contact Us
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Pricing
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Licenses
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Sitmap
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent3" aria-controls="navbarToggleExternalContent3"
+              aria-expanded="false" aria-label="Toggle navigation"">
+              <a class=" nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-fill text-body-tertiary"></i>&nbsp;&nbsp;Account
+              </a>
+              <div class="collapse" id="navbarToggleExternalContent3" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Overview
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Settings
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Security
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Activity
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Billing
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Statements
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Referrals
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>API Keys
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Logs
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Orders
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <button class="nav-item dropdown  type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent0" aria-controls="navbarToggleExternalContent0"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-fingerprint text-body-tertiary"></i>&nbsp;&nbsp;Authentication
+              </a>
+              <div class="collapse" id="navbarToggleExternalContent0" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Sign in
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Sign up
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Welcome Message
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Verify Email
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Password<br>Confirmation
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Account Deactivation
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Error 404
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Error 500
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Email Templates
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent4" aria-controls="navbarToggleExternalContent4"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-bounding-box-circles text-body-tertiary"></i>&nbsp;&nbsp;Utilities </a>
+              <div class="collapse" id="navbarToggleExternalContent4" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Modals
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Search
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Wizards
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent5" aria-controls="navbarToggleExternalContent5"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-gear-fill text-body-tertiary"></i>&nbsp;&nbsp;Layouts </a>
+              <div class="collapse" id="navbarToggleExternalContent5" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Extended Aside
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Compact Aside
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Minimized Aside
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Tabbed Content
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Layout Builder
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <li class="nav-item">
+              <br>
+              <a class="nav-link active" aria-current="page">&nbsp;&nbsp;&nbsp;&nbsp;APPS</a>
+            </li>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent6" aria-controls="navbarToggleExternalContent6"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-rocket-takeoff text-body-tertiary"></i>&nbsp;&nbsp;Projects
+              </a>
+              <div class="collapse" id="navbarToggleExternalContent6" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>My Projects
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>View Project
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Targets
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Budget
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Users
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Files
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Activity
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Setting
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent7" aria-controls="navbarToggleExternalContent7"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-cart-shopping text-body-tertiary">
+                  </i>&nbsp;&nbsp;eCommerce </a>
+              <div class="collapse" id="navbarToggleExternalContent7" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Catalog
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Sales
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Customers
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Reports
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Settings
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent8" aria-controls="navbarToggleExternalContent8"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-phone-fill text-body-tertiary"></i>&nbsp;&nbsp;Contacts </a>
+              <div class="collapse" id="navbarToggleExternalContent8" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Getting Started
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Add Contact
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Edit Contact
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>View Contact
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent9" aria-controls="navbarToggleExternalContent9"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-egg-fried text-body-tertiary"></i>&nbsp;&nbsp;Support Center
+              </a>
+              <div class="collapse" id="navbarToggleExternalContent9" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Overview
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Tickets
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Tutorials
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>FAQ
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Licenses
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Contact Us
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Activity
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Setting
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent10" aria-controls="navbarToggleExternalContent10"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-shield-fill-check text-body-tertiary"></i>&nbsp;&nbsp;User Managment </a>
+              <div class="collapse" id="navbarToggleExternalContent10" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Users
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Roles
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Permissions
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent11" aria-controls="navbarToggleExternalContent11"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-briefcase-fill text-body-tertiary"></i>&nbsp;&nbsp;Customers </a>
+              <div class="collapse" id="navbarToggleExternalContent11" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Getting Started
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Customer Listing
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Customer Details
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent12" aria-controls="navbarToggleExternalContent12"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-file-earmark-fill text-body-tertiary"></i>&nbsp;&nbsp;File Manager </a>
+              <div class="collapse" id="navbarToggleExternalContent12" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Folders
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Files
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Blank Directory
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Setting
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent13" aria-controls="navbarToggleExternalContent13"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-archive-fill text-body-tertiary"></i>&nbsp;&nbsp;Inbox </a>
+              <div class="collapse" id="navbarToggleExternalContent13" data-bs-theme="white">
+                <div class="bg-white p-4">
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Messages
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Compose
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>View & Reply
+                      </a></li>
+                    <br>
+                  </ul>
+            </button>
+
+            <button class="nav-item dropdown type=" button" data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent14" aria-controls="navbarToggleExternalContent14"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <a class="nav-link test" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-chat-square-text-fill text-body-tertiary"></i>&nbsp;&nbsp;Chat</a>
+
+
+              <div class="collapse" id="navbarToggleExternalContent14" data-bs-theme="white">
+                <div class="bg-white p-4">
+
+
+
+                  <ul class="">
+                    <li><a class="dropdown-item " href="#">
+                        <div class="bullet-dot"></div>Private Chat
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Group Chat
+                      </a></li>
+                    <br>
+                    <li><a class="dropdown-item" href="#">
+                        <div class="bullet-dot"></div>Drawer Chat
+                      </a></li>
+                    <br>
+                  </ul>
+                </div>
+              </div>
+            </button>
+
+            <li class="nav-item">
+              <a class="nav-link " href="#">
+                &nbsp;&nbsp;<i class="bi bi-calendar-date-fill text-body-tertiary"></i>&nbsp;&nbsp;Calendar </a>
+            </li>
+
+            <br>
+            <hr>
+
+            <br>
+            <li class="nav-item">
+              <a class="nav-link " href="#">
+                <i class="bi bi-square-half text-body-tertiary"></i>&nbsp;&nbsp;Components </a>
+            <li class="nav-item">
+              <a class="nav-link " href="#">
+                <i class="bi bi-app text-body-tertiary"></i>&nbsp;&nbsp;Documentation </a>
+            <li class="nav-item">
+              <a class="nav-link " href="#">
+                <i class="bi bi-hexagon text-body-tertiary"></i>&nbsp;&nbsp;Layout Builder </a>
+            <li class="nav-item">
+              <a class="nav-link " href="#">
+                <i class="bi bi-file-code text-body-tertiary"></i>&nbsp;&nbsp;Changelog</a>
+
+
+
+
+              <ul class="">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
               </ul>
             </li>
           </ul>
-          <form class="d-flex mt-3" role="search">
+          <!-- <form class="d-flex mt-3" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          </form> -->
         </div>
       </div>
     </div>
   </nav>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-  </body>
+  <script>
+
+    const btn = document.querySelector('.test-1');
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('rotate');
+
+    });
+
+
+    const btns = document.querySelectorAll('.test');
+    btns.forEach((item) => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('rotate');
+      });
+    });
+
+
+    const textElement = document.querySelector('.test-text-1');
+    textElement.addEventListener('click', () => {
+      textElement.classList.toggle('color-change');
+    });
+
+    const textElements = document.querySelectorAll('.test-text');
+    textElements.forEach((item) => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('color-change');
+      });
+    });
+
+  </script>
+
+</body>
 
 </html>
