@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        font-weight: 400;
+        font-family: Inter, Helvetica, "sans-serif";
+    }
+    .all{
+        height: 100%;
+    }
+    .nav{
+        height: 60px;
+    }
+    .content{
+        padding: 20px 0;
+    }
+    #kt_toolbar{
+        margin-bottom: 20px;
+    }
+    li{
+        font-size: 13px;
+    }
+    #t-card{
+        margin-bottom: 19.5px;
+    }
+    #sidebar-header{
+        min-height: 70px;
+        padding: 0 19.5px;
+    }
+    #sidebar-body{
+        height: 345.5px;
+        padding: 22.75px 16.25px;
+    }
+    .card-body{
+        flex: 1 1 auto;
+        padding: 26px 29.25px;
+    }
+    .card-header{
+        min-height: 70px;
+        padding: 6px 27px;
+    }
+    .menu-item{
+        width: 763.5px;
+        height: 65.47px;
+        padding: 13px 16.25px;
+    }
+    .bullet{
+        width: 8px;
+        height: 4px;
+    }
+    .text-margin{
+        margin-bottom: 13px;
+    }
+    .margin-class{
+        margin-bottom: 26px;
+    }
+    .card-title{
+        margin: 6.5px 6.5px 6.5px 0;
+    }
+    .card-toolbar .btn{
+        color: rgb(53, 149, 246);
+    }
+    .symbol{
+        width: 65px;
+        height: 65px;
+        background-image: url("https://preview.keenthemes.com/craft/assets/media/svg/brand-logos/atica.svg");
+        background-size: contain;
+        margin: 0 29.5px 22.75px 0;
+    }
+    img{
+        height: 65px;
+        width: 65px;
+        margin: 0 29.5px 22.75px 0;
+    }
+    textarea{
+        padding: 10.075px 13px;
+        margin-bottom: 32.5px;
+    }
+    #kt-footer{
+        height: 66.25px;
+        padding: 13px 0;
+        align-items: center;
+    }
+    #table-text-1{
+        min-width: 250px;
+        color: #4b5675;
+        font-weight: 300;
+    }
+    .table-responsive{
+        overflow-x: auto;
+    }
+    .padding-style{
+        padding: 0 20px;
+    }
+    .font-size{
+        font-size: 12.35px;
+    }
+    .menu-title{
+        font-size: 13.975px;
+    }
+    .menu-link{
+        padding: 8.45px 6.5px;
+    }
+    .set-width-3{
+        min-width: 90px;
+    }
+    .set-width-2{
+        min-width: 150px;
+    }
+    .table-size{
+        font-size: 13.975px;
+    }
+    .table-size-2{
+        font-size: 16.25px;
+    }
+    .btn-text-color{
+        color: #78829d;
+    }
+    .title-size{
+        font-size: 17.4588px;
+    }
+    .size-13{
+        font-size: 13px;
+    }
+    @media(min-width: 768px){
+        #bp-right{
+            flex: 1 auto;
+            min-width: 0;
+        }
+    }
+    @media(min-width: 992px){
+        .all{
+            padding: 0 40px 0 300px;
+        }
+        #sidebar-body{
+            height: 758.5px;
+        }
+        #bp-left{
+            flex: 0 0 auto;
+            width: 250px !important;
+        }
+        #bp-right{
+            margin-left: 39px;
+        }
+        .nav{
+            width: 212.5px
+        }
+    }
+    @media(min-width: 1400px){
+        #bp-left{
+            width: 275px !important;
+        }
+    }
+  </style>
+  <body>
+   <div class="container-fluid all bg-body-tertiary">
+    <div class="row d-flex flex-column flex-wrap">
+        <nav class="nav w-100 bg-light-subtle padding-style"></nav>
+        <div class="content w-100">
+            <div class="toolbar" id="kt_toolbar">
+                <div class="all-toolbar padding-style container-fluid d-flex flex-wrap justify-content-between flex-sm-nowrap">
+                    <div class="d-flex flex-column align-items-sm-start justify-content-center flex-wrap me-2">
+                        <h1 class="fw-semibold my-1 fs-5">Orders Tracking</h1>
+                        <ul class="breadcrumb fw-semibold my-1 flex-wrap">
+                            <li class="breadcrumb-item text-body-tertiary size-13">Home</li>
+                            <li class="breadcrumb-item text-body-tertiary size-13">Account</li>
+                            <li class="breadcrumb-item text-body-tertiary size-13">Orders</li>
+                            <li class="breadcrumb-item text-dark size-13">Invoice</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex flex-nowrap align-items-center text-nowrap py-1">
+                        <a href="#" class="btn bg-body btn-color-gray-700 me-4">Invite Friends</a>
+                        <a href="#" class="btn btn-primary">New Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post fs-6 d-flex flex-column-fluid padding-style" id="kt_post">
+                <div class="container-xll w-100">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <div class="flex-column flex-md-row-auto w-100" id="bp-left">
+                            <div class="card border-0 mb-6 mb-lg-0" id="t-card">
+                                <div class="card-header bg-light-subtle d-flex justify-content-between align-items-center" id="sidebar-header">
+                                    <div class="card-title m-0">
+                                        <h3 class="fw-bold m-0 title-size">Orders</h3>
+                                    </div>
+                                    <div class="card-toolbar">
+                                        <select class="form-select bg-dark-subtle border-white" aria-label="Default select example">
+                                            <option value="1" class="bg-light" style="width: 100px;">All</option>
+                                            <option value="2" class="bg-light" style="width: 100px;">New</option>
+                                            <option value="3" class="bg-light" style="width: 100px;">Cancelled</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="card-body overflow-y-auto" id="sidebar-body">
+                                    <div class="scroll-y">
+                                        <ul id="kt-account-settings" class="nav">
+                                            <li class="menu-item d-flex align-items-center">
+                                                <a href="#" class="menu-link nav-link align-items-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="menu-title text-black fw-bold table-size">Converse On Air</span>
+                                                        <span class="menu-content text-body-tertiary p-0 font-size">SKU: 0047756000</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item d-flex align-items-center">
+                                                <a href="#" class="menu-link nav-link align-items-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="menu-title text-black fw-bold table-size">Bang & Olufsen</span>
+                                                        <span class="menu-content text-body-tertiary p-0 font-size">SKU: 0047756000</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item d-flex align-items-center">
+                                                <a href="#" class="menu-link nav-link align-items-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="menu-title text-black fw-bold table-size">White Chair</span>
+                                                        <span class="menu-content text-body-tertiary p-0 font-size">SKU: 0047756000</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item d-flex align-items-center">
+                                                <a href="#" class="menu-link nav-link align-items-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="menu-title text-black fw-bold table-size">Green & Purple Mat</span>
+                                                        <span class="menu-content text-body-tertiary p-0 font-size">SKU: 0047756000</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item d-flex align-items-center">
+                                                <a href="#" class="menu-link nav-link align-items-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="menu-title text-black fw-bold table-size">Nike Air 200</span>
+                                                        <span class="menu-content text-body-tertiary p-0 font-size">SKU: 0047756000</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item d-flex align-items-center">
+                                                <a href="#" class="menu-link nav-link align-items-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="menu-title text-black fw-bold table-size">Black & White Bowl</span>
+                                                        <span class="menu-content text-body-tertiary p-0 font-size">SKU: 0047756000</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item d-flex align-items-center">
+                                                <a href="#" class="menu-link nav-link align-items-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="menu-title text-black fw-bold table-size">Bose QC35 IIZ</span>
+                                                        <span class="menu-content text-body-tertiary p-0 font-size">SKU: 0047756000</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item d-flex align-items-center">
+                                                <a href="#" class="menu-link nav-link align-items-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="menu-title text-black fw-bold table-size">MSI P75 Limited Edition</span>
+                                                        <span class="menu-content text-body-tertiary p-0 font-size">SKU: 0047756000</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item d-flex align-items-center">
+                                                <a href="#" class="menu-link nav-link align-items-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="menu-title text-black fw-bold table-size">Green & Purple Mat</span>
+                                                        <span class="menu-content text-body-tertiary p-0 font-size">SKU: 0047756000</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item d-flex align-items-center">
+                                                <a href="#" class="menu-link nav-link align-items-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="menu-title text-black fw-bold table-size">Apple Watch Data</span>
+                                                        <span class="menu-content text-body-tertiary p-0 font-size">SKU: 0047756000</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item d-flex align-items-center">
+                                                <a href="#" class="menu-link nav-link align-items-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="menu-title text-black fw-bold table-size">Google Origin DX</span>
+                                                        <span class="menu-content text-body-tertiary p-0 font-size">SKU: 0047756000</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-md-row-fluid ms-lg-12" id="bp-right">
+                            <div class="card border-0 h-lg-100">
+                                <div class="card-header bg-light-subtle d-flex justify-content-between align-items-center">
+                                    <div class="card-title flex-column">
+                                        <h3 class="fw-bold title-size m-0">Invoice</h3>
+                                        <span class="fs-7 fw-semibold text-body-tertiary text-muted">Ordered: Oct 24, 2020 | SKU: XQ-36800</span>
+                                    </div>
+                                    <div class="card-toolbar">
+                                        <a href="#" class="btn btn-flex fs-6 border-0">
+                                            <i class="bi bi-arrow-left-short"></i>
+                                             Order Details
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row margin-class">
+                                        <div class="col-lg-6">
+                                            <img src="https://preview.keenthemes.com/craft/assets/media/svg/brand-logos/atica.svg" alt="">
+                                            <div class="d-flex flex-column py-1">
+                                                <h3 class="fw-bold title-size">Atica, LCC</h3>
+                                                <div class="text-body-tertiary fw-semibold fs-6 text-margin">
+                                                    191-103 Integer Rd.
+                                                    <br>
+                                                    Corona New Mexico 08219
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 fs-6 text-body-tertiary fw-semibold text-right">
+                                            info@atica.io
+                                            <br>
+                                            Tax ID# 76787-09946
+                                        </div>
+                                    </div>
+                                    <div class="fs-6 margin-class">
+                                        <h3 class="fw-bold title-size mb-2">Order Invoice</h3>
+                                        <div class="fw-semibold text-body-tertiary fs-6">
+                                            Data: Oct 24, 2020 3:05 PM
+                                            <br>
+                                            Order #: 3004VH45454
+                                            <br>
+                                            Transaction #: 3004VH45454
+                                        </div>
+                                    </div>
+                                    <textarea class="form-control f bg-body-tertiary " rows="3"></textarea>
+                                    <h2 class="fw-bold title-size mb-3">Billing Statement</h2>
+                                    <div class="table-responsive mb-10">
+                                        <table class="table g-2 gs-0 align-middle fw-semibold border-white">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="fw-semibold text-start ps-0 text-body-secondary table-size" id="table-text-1">Lifetime Access Pass</th>
+                                                    <th class="text-body-tertiary fw-semibold text-muted text-start table-size set-width-2">Extend Licence, Unlimited End Products</th>
+                                                    <th class="fw-bold text-end table-size-2 set-width-3">$259.00</th>
+                                                </tr>
+                                                <tr>
+                                                    <th></th>
+                                                    <th class="text-body-tertiary text-end table-size">Subtotal</th>
+                                                    <th class="text-end fw-bold table-size">$259.00</th>
+                                                </tr>
+                                                <tr>
+                                                    <th></th>
+                                                    <th class="text-body-tertiary text-end table-size">VAT</th>
+                                                    <th class="fw-bold text-end table-size">$51.00</th>
+                                                </tr>
+                                                <tr>
+                                                    <th></th>
+                                                    <th class="text-body-tertiary text-end table-size">Total</th>
+                                                    <th class="fw-bold text-end table-size">$310.00</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="#" class="btn btn-light fw-bold me-3 btn-text-color">Print</a>
+                                        <a href="#" class="btn btn-primary ">Write a Review</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer d-flex flex-lg-column bg-light-subtle" id="kt-footer">
+            <div class="container-fluid d-flex flex-column justify-content-between flex-md-row padding-style">
+                <div class="text-dark order-2 order-md-1">
+                    <span class="text-muted fw-semibold me-2 size-13">2023©</span>
+                    <a href="#" class="text-body-emphasis size-13" style="text-decoration:none;">Keenthemes</a>
+                </div>
+                <div class="menu text-body-secondary fw-semibold order-1">
+                    <a href="" class="menu-link text-body-secondary size-13" target="_blank" style="text-decoration:none;">About</a>
+                    <a href="" class="menu-link text-body-secondary size-13" target="_blank" style="text-decoration:none;">Support</a>
+                    <a href="" class="menu-link text-body-secondary size-13" target="_blank" style="text-decoration:none;">Purchace</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
