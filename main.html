@@ -13,20 +13,49 @@
     /* button.navbar-toggler {
             float: left;
         } */
-    .offvanvas {
+    .offcanvas {
       display: flex;
+      flex-wrap: nowrap;
     }
 
     .Pic {
       width: 35px;
       height: 35px;
       border-radius: 6.175px;
+      margin-left: 20px;
     }
     .logo {
       position: absolute;
-      left: 120px;
+      left: 60px;
       line-height: 19.5px;
+      width: 40px;
+      height: 40px;
     }
+    .nav-s {
+      padding: 0 20px;
+    }
+    .bi{
+      margin-left: 20px;
+    }
+    
+    ::marker {
+      /* 清除偽類，利用刪除content */
+      content:none;
+    }
+    .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: url(./);
+
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    transform: rotateZ(90deg);
+    transition: transform 0.3s ease;}
+    
+
   </style>
 </head>
 
@@ -39,29 +68,42 @@
     </button>
     
     <img class="logo" src="https://preview.keenthemes.com/craft/assets/media/logos/logo-compact.svg">
-    <div class="nav-s">
+    <div class="nav-s d-flex flex-nowrap">
     <i class="bi bi-search text-body-tertiary"></i>
     <i class="bi bi-bar-chart-line-fill text-body-tertiary"></i>
     <i class="bi bi-grid-fill text-body-tertiary"></i>
     <i class="bi bi-chat-square-text text-body-tertiary"></i>
     <i class="bi bi-grid-fill text-body-tertiary "></i>
     <i class="bi bi-brightness-high-fill text-body-tertiary"></i>
-  
     <img class="Pic" src="	https://preview.keenthemes.com/craft/assets/media/avatars/300-1.jpg">
   </div>
     <div class="container-fluid">
-
 
       <!-- <a class="navbar-brand" href="#"></a> -->
 
 
       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-
+        
         <div class="offcanvas-body">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dashboards
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Multipurpose</a></li>
+              <br>
+              <li><a class="dropdown-item" href="#">Store Analytics</a></li>
+              <br>
+              <li><a class="dropdown-item" href="#">Logistics</a></li>
+              <br>
+              <li><a class="dropdown-item" href="#">Projects</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -95,6 +137,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
-</body>
+
+  </body>
 
 </html>
